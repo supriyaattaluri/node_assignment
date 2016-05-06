@@ -1,0 +1,62 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script>
+
+   $(document).on('click', '.toggle-button', function() {
+    $(this).toggleClass('toggle-button-selected'); 
+});
+
+ </script>
+<style>
+
+#h3{
+ border-radius: 20px;
+color : white;
+background-color: #d9534f;
+margin-top:-4px;
+}
+#header{
+	     border-style: solid;
+        width:30%;
+        border-width: 3px;
+        border-color: #d9534f;
+        border-radius: 20px;
+        line-height: 40px;
+        margin-left: 20px;
+        text-align: center;
+
+
+}
+
+#tablebody{
+     border-spacing: 20px;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="header">
+<h3  id="h3">Add New</h3>
+
+<form action="http://localhost:2016/products/add" method="POST">
+<table id="tablebody">
+
+   <tr><td>sku</td><td><input type="text" name="Sku"><br></td></tr>
+   <tr><td>Name</td><td><input type="text" name="Name"><br></td></tr>
+   <tr><td>Info</td><td><input type="text" name="Info"><br></td></tr>
+   <tr><td>Active</td><td><input type="text" name="Active"><br></td></tr>
+   
+   <tr><td colspan="2"><input type="submit"  value="submit" style="float:right;"></td></tr>
+
+
+ </table>
+ 
+  </form> 
+</div>
+   
+</body>
+</html>

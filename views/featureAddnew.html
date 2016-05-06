@@ -1,0 +1,55 @@
+<html>
+<head>
+
+<style>
+
+#h3{
+ border-radius: 20px;
+color : white;
+background-color: #d9534f;
+margin-top:-4px;
+}
+#header{
+	     border-style: solid;
+        width:30%;
+        border-width: 3px;
+        border-color: #d9534f;
+        border-radius: 20px;
+        line-height: 40px;
+        margin-left: 20px;
+        text-align: center;
+
+
+}
+
+#tablebody{
+     border-spacing: 20px;
+
+}
+
+</style>
+</head>
+<body>
+
+<div id="header">
+<h3  id="h3">Add New</h3>
+
+<form action="http://localhost:2016/features/createFeature" method="POST">
+<table id="tablebody">
+
+   <tr><td>key</td><td><input type="text" name="Key"><br></td></tr>
+   <tr><td>val</td><td><input type="text" name="Value"><br></td></tr>
+  
+   <tr><td>Active:</td>
+   <td><input type="button" value="A" name="Active"><br></td></tr>
+   
+ <tr><td colspan="2"><input type="submit"  value="submit"style="float:right;"></td></tr>
+
+
+ </table>
+ </form>
+   
+</div>
+   
+</body>
+</html>

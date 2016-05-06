@@ -1,0 +1,115 @@
+<html>
+<head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script>
+
+   $(document).on('click', '.toggle-button', function() {
+    $(this).toggleClass('toggle-button-selected'); 
+});
+
+ </script>
+
+<style>
+
+#h3{
+ border-radius: 20px;
+color : white;
+background-color: #d9534f;
+margin-top:-4px;
+}
+#header{
+	     border-style: solid;
+        width:30%;
+        border-width: 3px;
+        border-color: #d9534f;
+        border-radius: 20px;
+        line-height: 40px;
+        margin-left: 20px;
+        text-align: center;
+
+
+}
+
+#tablebody{
+     border-spacing: 20px;
+
+}
+
+
+ .toggle-button { 
+     background-color: white;
+     margin: 5px 0;
+     border-radius: 20px; 
+     border: 2px solid #D0D0D0; 
+     height: 14px; 
+     cursor: pointer;
+     width: 40px; 
+     position: relative; 
+     display: inline-block;
+     user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    -moz-user-select: none;
+    }
+.toggle-button button { 
+  cursor: pointer; 
+  outline: 0; 
+  display:block; 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  border-radius: 100%; 
+  width: 20px; 
+  height: 20px; 
+  background-color: white; 
+  float: left;
+   margin: -3px 0 0 -3px; 
+   border: 2px solid #D0D0D0; 
+   transition: left 0.3s;
+    }
+.toggle-button-selected {
+ background-color: #83B152; 
+ border: 2px solid #7DA652; 
+}
+.toggle-button-selected button { 
+  left: 26px; 
+  top: 0; 
+  margin: 0; 
+  border: none; 
+  width: 14px;
+   height: 14px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1); 
+  }
+
+</style>
+</head>
+<body>
+
+<div id="header">
+<h3  id="h3">Editing</h3>
+
+<form name="form1" method="put" action="#">
+<table id="tablebody">
+
+   <tr><td>key</td><td><input type="text" name="Key" value="{{feature.Key}}"><br></td></tr>
+   <tr><td>val</td><td><input type="text" name="Value" value="{{feature.Value}}"><br></td></tr>
+  
+   <tr><td>Active:</td>
+   <td>
+   <div class="toggle-button toggle-button-selected">
+        <button></button>
+    </div>
+    </td></tr>
+   
+ <tr><td colspan="2"><input type="submit" name="update" value="update" style="float:right;"></td></tr>
+
+
+ </table>
+ </form>
+   
+</div>
+   
+</body>
+</html>

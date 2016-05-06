@@ -1,0 +1,71 @@
+<html>
+<head>
+<style>
+
+.main {
+    width: 40%;
+    height: 50%;
+    margin-left: 80px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #008CBA;
+    border-radius: 20px;
+        margin-left: 250px;
+
+}
+
+
+
+.button1 {
+    background-color: #f44336;
+    border-radius: 20px;
+       float: right;
+       margin-right: 30px;
+   }
+#pa{
+font-size: 20px;
+border-radius:30px;
+
+}
+</style>
+
+  
+</head>
+
+<body>
+    <div class="main">
+        <div style="width: 99%; height: 15%; background-color: #D9534F; padding: 10px 0px 10px 10px;">
+            <div id="pa">Confirm Delete</div>
+        </div>
+        <div style="width: 99%; height: 40%;padding: 20px 0px 0px 20px;">
+            <p>Are you sure to delete?</p>
+        </div>
+        
+        <div >
+<form action="http://localhost:2016/features/delete/{{feature.id }}" method="GET">
+
+            <input  class="button button1" type="submit" name="Delete" value="Delete">
+            </form>
+            <input class="button button2" type="submit" name="Cancel" value="cancel">
+        </div>
+    </div>
+</body>
+
+</html>
